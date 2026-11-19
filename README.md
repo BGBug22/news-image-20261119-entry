@@ -20,8 +20,9 @@ label and number is placed by code, no AI-generated text anywhere:
   nominated for Speaker, Anthropic IPO at $83, COP31's $120bn ask, Cyclone
   Akvan, Trump's TPS fight at the Supreme Court.
 - **By the Numbers** — 1,441 drones, $83, $120bn, 251–11.
-- **Where the News Happened** — a halftone dotted world map with eight
-  numbered pins and a legend.
+- **Where the News Happened** — a dark navy world map with gold halftone
+  dots, eight large numbered pins and a legend (v2: redrawn dark for
+  thumbnail contrast; v1's pale map band barely read at 300 px).
 - **Also on this day** — eleven more verified stories, with sources
   (Reuters, AP, Al Jazeera, BBC, Le Monde, The Guardian).
 
@@ -29,8 +30,8 @@ label and number is placed by code, no AI-generated text anywhere:
 
 `main.ts` (Node 22, standard library only) copies the shipped `entry.png`
 to `/output/entry.png`. The image is deterministic: two runs write identical
-bytes (sha256 `096751bca877d3cc6dc13ab44e333ad11695d5889ae01f06be78f4f3328edccc`,
-131,199 bytes).
+bytes (v2 sha256 `006421a6e148c7ae4cec1dce656b28dc7d62fa87ad9f62a60e94d9df20cfd7c3`,
+132,536 bytes; v1 was 131,199 bytes, sha256 `096751bc…`).
 
 Run locally:
 
