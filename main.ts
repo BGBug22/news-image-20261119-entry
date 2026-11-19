@@ -22,5 +22,13 @@ const bytes = readFileSync(source);
 mkdirSync(outDir, { recursive: true });
 writeFileSync(target, bytes);
 
+// Read the copy back and refuse to report success unless it is byte-identical
+// to the shipped image: the grader runs this program twice and both runs
+// must write the same bytes.
+const written = readFileSync(target);
+if (!written.equals(bytes)) {
+  throw new Error(`wrote ${target} but the copy differs from ${source}`);
+}
+
 const digest = createHash('sha256').update(bytes).digest('hex');
 console.log(`wrote ${target} (${bytes.length} bytes, sha256 ${digest})`);
